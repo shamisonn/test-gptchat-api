@@ -2,16 +2,24 @@
   "name": "test-gptchat-api",
   "version": "0.0.1",
   "description": "",
+  "type": "module",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "prestart": "npm run build",
-    "start": "node ."
+    "start": "node .",
+    "redis-up": "docker compose up -d",
+    "redis-down": "docker compose down"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^18.15.11",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@keyv/redis": "^2.5.7",
+    "chatgpt": "^5.2.2"
   }
 }
